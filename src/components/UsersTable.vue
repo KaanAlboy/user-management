@@ -41,8 +41,8 @@ const emit = defineEmits(['sort-table', 'edit-button-click', 'delete-button-clic
       </thead>
       <tbody>
         <tr v-for="user in userList" :key="user.id.toString" class="">
-          <td class="px-4 py-3 text-[#4F5659] font-normal">{{ user.name }}</td>
-          <td class="px-4 py-3 text-[#4F5659] font-normal flex items-center gap-2.5">
+          <td class="px-4 py-3 text-[#4F5659] font-normal text-nowrap">{{ user.name }}</td>
+          <td class="px-4 py-3 text-[#4F5659] font-normal flex items-center gap-2.5 text-nowrap">
             <div class="w-2.5 h-1.5 bg-[#F43F5E] rounded-[5px]"></div>
             {{ user.email }}
           </td>
