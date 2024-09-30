@@ -16,20 +16,20 @@ const router = useRouter()
 let showFormModal = ref(false)
 let showDeleteModal = ref(false)
 let userIdForDelete = ref('')
-let actionType: 'create' | 'update'
+let formActionType: 'create' | 'update'
 
 function handleEditButtonClick(userId: string) {
   router.push({ name: 'update-user-modal', params: { id: userId } })
 
   showFormModal.value = true
-  actionType = 'update'
+  formActionType = 'update'
 }
 
 function createUser() {
   router.push({ name: 'create-user-modal' })
 
   showFormModal.value = true
-  actionType = 'create'
+  formActionType = 'create'
 }
 
 function handleCloseFormModal() {
@@ -64,7 +64,7 @@ watch(route, (to) => {
 <template>
   <ModalLayout :is-open="showFormModal" @close-modal="handleCloseFormModal">
     <template v-slot:header>
-      <FormModalHeader :actionType="actionType"></FormModalHeader>
+      <FormModalHeader :actionType="formActionType"></FormModalHeader>
     </template>
     <template v-slot:content>
       <RouterView></RouterView>
