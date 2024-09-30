@@ -7,8 +7,8 @@ const emit = defineEmits(['close-modal'])
 </script>
 
 <template>
-  <div v-if="isOpen" class="z-40 w-full h-full bg-black/[0.12] fixed top-0 left-0">
-    <div class="mt-60 mx-auto max-w-[546px] p-5 bg-white rounded-lg">
+  <div v-if="isOpen" class="p-4 z-40 w-full h-full bg-black/[0.12] fixed top-0 left-0">
+    <div class="mt-[20vh] mx-auto max-w-[546px] p-5 bg-white rounded-lg">
       <div class="flex justify-between flex-row-reverse items-start mb-4">
         <img
           @click="emit('close-modal')"
