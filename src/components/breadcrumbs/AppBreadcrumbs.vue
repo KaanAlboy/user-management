@@ -16,7 +16,7 @@ watch(route, () => {
   <nav>
     <ul class="flex items-center">
       <li>
-        <img src="../../assets/homeIcon.svg" />
+        <img src="../../assets/HomeIcon.svg" />
       </li>
       <li class="flex items-center">
         <BreadcrumbItem
