@@ -81,11 +81,13 @@ watch(route, (to) => {
   </ModalLayout>
 
   <PageHeader buttonText="Create" @click="() => createUser()"></PageHeader>
-  <UsersTable
-    class="mt-14"
-    :user-list="userList"
-    @sort-table="(col) => userListStore.sortUserList(col)"
-    @edit-button-click="handleEditButtonClick"
-    @delete-button-click="handleDeleteButtonClick"
-  ></UsersTable>
+
+  <div class="mt-14 px-8">
+    <UsersTable
+      :user-list="userList"
+      @sort-table="(col) => userListStore.sortUserList(col)"
+      @edit-button-click="handleEditButtonClick"
+      @delete-button-click="handleDeleteButtonClick"
+    ></UsersTable>
+  </div>
 </template>

@@ -10,7 +10,7 @@ const emit = defineEmits(['sort-table', 'edit-button-click', 'delete-button-clic
 </script>
 
 <template>
-  <div class="px-8 w-full overflow-auto">
+  <div class="w-full overflow-auto">
     <table class="w-full">
       <thead>
         <tr>
