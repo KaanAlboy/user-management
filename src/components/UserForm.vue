@@ -33,6 +33,8 @@ onMounted(() => {
       form.name.value = userToEdit.name
       form.email.value = userToEdit.email
       form.age.value = userToEdit.age.toString()
+    } else {
+      goToHomePage()
     }
   }
 })
