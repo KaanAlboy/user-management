@@ -7,7 +7,6 @@ const route = useRoute()
 const breadcrumbList = ref(route.meta.breadcrumbs)
 
 watch(route, () => {
-  console.log(route.meta)
   breadcrumbList.value = route.meta.breadcrumbs
 })
 </script>
