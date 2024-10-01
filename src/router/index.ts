@@ -6,7 +6,7 @@ import FormView from '@/views/FormView.vue'
 
 interface breadcrumb {
   name: string
-  link: string
+  link?: string
 }
 
 declare module 'vue-router' {
@@ -24,10 +24,7 @@ const router = createRouter({
       name: 'create',
       component: FormView,
       meta: {
-        breadcrumbs: [
-          { name: 'Home', link: '/' },
-          { name: 'Create', link: '/create' }
-        ]
+        breadcrumbs: [{ name: 'Home', link: '/' }, { name: 'Create' }]
       }
     },
     {
@@ -35,10 +32,7 @@ const router = createRouter({
       name: 'edit',
       component: FormView,
       meta: {
-        breadcrumbs: [
-          { name: 'Home', link: '/' },
-          { name: 'Create', link: '/create' }
-        ]
+        breadcrumbs: [{ name: 'Home', link: '/' }, { name: 'Edit' }]
       }
     },
     {

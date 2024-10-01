@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps({
-  to: { type: String, default: '/' },
+  to: { type: String, default: '' },
   label: String,
   isFirstBreadcrumb: Boolean
 })
