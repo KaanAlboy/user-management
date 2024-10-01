@@ -17,11 +17,13 @@ watch(route, () => {
       <li>
         <img src="../../assets/HomeIcon.svg" />
       </li>
-      <li class="flex items-center">
+      <li
+        v-for="(breadcrumb, index) in breadcrumbList"
+        :key="breadcrumb.name"
+        class="flex items-center"
+      >
         <BreadcrumbItem
-          v-for="(breadcrumb, index) in breadcrumbList"
           :to="breadcrumb.link"
-          :key="breadcrumb.name"
           :label="breadcrumb.name"
           :isFirstBreadcrumb="index === 0"
         ></BreadcrumbItem>
